@@ -33,5 +33,10 @@
     "@types/react-dom": "^19.3.0",
     "firebase-tools": "^15.35.0",
     "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "jwks-rsa": {
+      "jose": "^5.10.0"
+    }
   }
 }
