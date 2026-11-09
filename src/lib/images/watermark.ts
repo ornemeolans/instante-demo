@@ -1,4 +1,13 @@
 import sharp from "sharp";
+import * as opentypeNs from "opentype.js";
+import type { Font } from "opentype.js";
+
+// opentype.js 2 se expone como CommonJS: según quién lo cargue (Next o Node
+// directo), `parse` llega como export con nombre o dentro de `default`.
+const parse: typeof opentypeNs.parse =
+  (opentypeNs as { parse?: typeof opentypeNs.parse }).parse ??
+  (opentypeNs as unknown as { default: typeof opentypeNs }).default.parse;
+import { HANKEN_BOLD_LATIN, HANKEN_BOLD_LATIN_EXT } from "./watermark-font.ts";
 
 // Sin "server-only" a propósito: este módulo también lo usa el script de
 // prueba `npm run test:watermark`, que corre fuera de Next.
@@ -9,13 +18,36 @@ export interface RenderedImage {
   height: number;
 }
 
-function escapeXml(text: string): string {
-  return text.replace(/[<>&'"]/g, (c) =>
-    ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", "'": "&apos;", '"': "&quot;" })[c]!,
-  );
+/*
+ * El texto de la marca se dibuja como TRAZOS (paths SVG) con una fuente
+ * embebida, no con <text>: los servidores sin fuentes instaladas (Netlify,
+ * Vercel, Lambda) mostrarían "□□□" en lugar del nombre.
+ */
+let fonts: Font[] | null = null;
+function loadFonts(): Font[] {
+  if (!fonts) {
+    const toArrayBuffer = (b64: string) => {
+      const buf = Buffer.from(b64, "base64");
+      return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength);
+    };
+    fonts = [parse(toArrayBuffer(HANKEN_BOLD_LATIN)), parse(toArrayBuffer(HANKEN_BOLD_LATIN_EXT))];
+  }
+  return fonts;
 }
 
-const FONT = "Arial, Helvetica, DejaVu Sans, sans-serif";
+/** Convierte un texto en datos de path SVG. Devuelve el path y su ancho real. */
+function textToPath(text: string, fontSize: number, x0: number, baseline: number, letterSpacing = 0) {
+  const [latin, ext] = loadFonts();
+  let x = x0;
+  let d = "";
+  for (const ch of text) {
+    const font = latin.charToGlyphIndex(ch) > 0 || ext.charToGlyphIndex(ch) === 0 ? latin : ext;
+    const glyph = font.charToGlyph(ch);
+    d += glyph.getPath(x, baseline, fontSize).toPathData(1);
+    x += ((glyph.advanceWidth ?? font.unitsPerEm * 0.5) / font.unitsPerEm) * fontSize + letterSpacing;
+  }
+  return { d, width: x - x0 - letterSpacing };
+}
 
 /** Una capa de texto repetido en mosaico, con filas alternas desplazadas media baldosa. */
 function textLayer(opts: {
@@ -30,18 +62,15 @@ function textLayer(opts: {
   style: string;
 }): { def: string; rect: string } {
   const { id, raw, fontSize, angle, gapX, rowH, offsetX, offsetY, style } = opts;
-  const label = escapeXml(raw);
-  // textLength fija el ancho del texto: así nunca se sale del mosaico, sea cual sea la fuente.
-  const textW = Math.round([...raw].length * fontSize * 0.6);
-  const tileW = textW + gapX;
+  const probe = textToPath(raw, fontSize, 0, 0);
+  const tileW = Math.ceil(probe.width + gapX);
   const tileH = rowH * 2;
-  const t = (x: number, y: number) =>
-    `<text x="${x}" y="${y}" textLength="${textW}" lengthAdjust="spacingAndGlyphs" font-family="${FONT}" font-size="${fontSize}" font-weight="700" ${style}>${label}</text>`;
   const y1 = Math.round(rowH * 0.5 + fontSize * 0.35);
   const y2 = y1 + rowH;
+  const p = (x: number, y: number) => `<path d="${textToPath(raw, fontSize, x, y).d}" ${style}/>`;
   const def = `<pattern id="${id}" patternUnits="userSpaceOnUse" width="${tileW}" height="${tileH}"
       patternTransform="translate(${offsetX} ${offsetY}) rotate(${angle})">
-      ${t(gapX / 2, y1)}${t(gapX / 2 + tileW / 2, y2)}${t(gapX / 2 - tileW / 2, y2)}
+      ${p(gapX / 2, y1)}${p(gapX / 2 + tileW / 2, y2)}${p(gapX / 2 - tileW / 2, y2)}
     </pattern>`;
   return { def, rect: `<rect width="100%" height="100%" fill="url(#${id})"/>` };
 }
@@ -100,10 +129,11 @@ export function tiledWatermarkSvg(width: number, height: number, watermark: stri
     </pattern>`;
 
   const stampFs = Math.round(Math.min(width / 7.5, height / 4));
-  const stamp = `<text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
-      transform="rotate(${-30 + jitter(2)} ${width / 2} ${height / 2})"
-      font-family="${FONT}" font-size="${stampFs}" font-weight="900" letter-spacing="${Math.round(stampFs * 0.05)}"
-      fill="#ffffff" fill-opacity="0.22" stroke="#000000" stroke-opacity="0.22" stroke-width="${Math.max(1, Math.round(stampFs / 40))}">VISTA PREVIA</text>`;
+  const stampSpacing = Math.round(stampFs * 0.05);
+  const stampW = textToPath("VISTA PREVIA", stampFs, 0, 0, stampSpacing).width;
+  const stampPath = textToPath("VISTA PREVIA", stampFs, (width - stampW) / 2, height / 2 + stampFs * 0.36, stampSpacing).d;
+  const stamp = `<path d="${stampPath}" transform="rotate(${-30 + jitter(2)} ${width / 2} ${height / 2})"
+      fill="#ffffff" fill-opacity="0.22" stroke="#000000" stroke-opacity="0.22" stroke-width="${Math.max(1, Math.round(stampFs / 40))}"/>`;
 
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
   <defs>${hatch}${small.def}${big.def}</defs>
