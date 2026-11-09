@@ -5,6 +5,9 @@ import { ChevronDown } from "lucide-react";
 
 const BUYER_USER = process.env.NEXT_PUBLIC_DEMO_MP_BUYER_USER;
 const BUYER_PASS = process.env.NEXT_PUBLIC_DEMO_MP_BUYER_PASS;
+// Código que Mercado Pago pide al iniciar sesión con un usuario de prueba:
+// los últimos 6 dígitos del ID de usuario de esa cuenta.
+const BUYER_CODE = process.env.NEXT_PUBLIC_DEMO_MP_BUYER_CODE;
 
 // Tarjetas de prueba públicas de Mercado Pago Argentina (no son tarjetas reales).
 const CARDS = [
@@ -44,6 +47,12 @@ export function DemoPaymentHelp() {
             <br />
             Usuario <code>{BUYER_USER}</code> <Copy text={BUYER_USER} /> · Contraseña{" "}
             <code>{BUYER_PASS}</code> <Copy text={BUYER_PASS} />
+            {BUYER_CODE && (
+              <>
+                <br />
+                Si te pide un código de verificación: <code>{BUYER_CODE}</code> <Copy text={BUYER_CODE} />
+              </>
+            )}
           </li>
         ) : (
           <li>En Mercado Pago, iniciá sesión con una cuenta compradora de prueba.</li>
@@ -60,7 +69,10 @@ export function DemoPaymentHelp() {
         </li>
         <li>Al terminar te llega un correo con el enlace de descarga del original.</li>
       </ol>
-      <p className="small" style={{ color: "var(--ink-soft)" }}>Ningún pago es real. Si Mercado Pago pide un código por correo, usá los últimos 6 dígitos del ID de usuario de la cuenta de prueba.</p>
+      <p className="small" style={{ color: "var(--ink-soft)" }}>
+        Ningún pago es real: es el modo de prueba de Mercado Pago.
+        {!BUYER_CODE && " Si pide un código de verificación, son los últimos 6 dígitos del ID de usuario de la cuenta de prueba."}
+      </p>
     </details>
   );
 }

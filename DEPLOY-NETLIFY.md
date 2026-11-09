@@ -122,7 +122,8 @@ gh repo create instante-demo --private --source . --push
    - Guardá y copiá la **clave secreta** a la variable `MP_WEBHOOK_SECRET` en Netlify.
 3. **Mercado Pago → Cuentas de prueba**: copiá el usuario y la contraseña de tu **comprador de
    prueba** en `NEXT_PUBLIC_DEMO_MP_BUYER_USER` y `NEXT_PUBLIC_DEMO_MP_BUYER_PASS` (se muestran en el
-   checkout para que los visitantes puedan pagar). Es una cuenta ficticia: no reutilices esa
+   checkout para que los visitantes puedan pagar), y en `NEXT_PUBLIC_DEMO_MP_BUYER_CODE` los últimos 6
+   dígitos de su **ID de usuario** (el código de verificación que pide al iniciar sesión). Es una cuenta ficticia: no reutilices esa
    contraseña en ningún otro lado.
 4. **Trigger deploy** otra vez para que tome las variables nuevas.
 
