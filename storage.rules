@@ -1,0 +1,23 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Originales: el fotógrafo autenticado solo puede SUBIR a su propia
+    // carpeta. Nadie puede leerlos desde el navegador; la entrega se hace
+    // con URLs firmadas generadas por el servidor (Admin SDK).
+    match /originals/{uid}/{eventId}/{fileName} {
+      allow read: if false;
+      allow create: if request.auth != null
+                    && request.auth.uid == uid
+                    && request.resource.size < 60 * 1024 * 1024
+                    && request.resource.contentType.matches('image/(jpeg|png|webp|tiff)');
+      allow update, delete: if false;
+    }
+
+    // Vistas previas con marca de agua: las escribe solo el servidor y se
+    // sirven por URL con token de descarga. Sin acceso por reglas.
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

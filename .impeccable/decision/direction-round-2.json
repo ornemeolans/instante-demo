@@ -1,0 +1,236 @@
+{
+  "title": "Instante · nueva dirección, más delicada",
+  "question": "Con tu indicación «más estético y delicado», la tirada asignó «Cianotipia». Quedate con ella, elegí otra o volvé a tirar.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Cianotipia",
+      "kicker": "THE ROLL",
+      "lineage": "Copias al sol en azul de Prusia sobre papel de algodón (Anna Atkins, 1843) y los fotogramas de flores que todavía se hacen en talleres",
+      "thesis": "Cada foto se revela como una copia al sol: azules lavados, papel de algodón con borde barbado y siluetas que dibuja la luz.",
+      "palette": [
+        "#f5f7fa",
+        "#dfe7f1",
+        "#8fa9c9",
+        "#2b4f86",
+        "#13284f"
+      ],
+      "materials": [
+        "papel de algodón con borde barbado",
+        "azul de Prusia en degradé de exposición",
+        "siluetas botánicas en blanco",
+        "anotaciones a lápiz"
+      ],
+      "viewport": "Una lámina azul de Prusia ocupa el centro sobre papel blanco frío; «Instante» aparece en blanco como si lo hubiera dibujado la luz, con una rama en silueta, y debajo, sobre el papel, el campo «Buscá tu evento» con su botón.",
+      "risk": "El azul monocromo puede competir con fotos a color si invade la galería; ahí el papel tiene que ser el protagonista.",
+      "raised": [
+        {
+          "from": "challenger-versailles",
+          "raise": "Composición en eje: la landing se ordena simétrica sobre un eje central, como un jardín visto desde la terraza."
+        },
+        {
+          "from": "challenger-cityfold",
+          "raise": "Las divisiones son hilos: líneas de un pelo, nunca cajas ni sombras duras."
+        },
+        {
+          "from": "challenger-futurist",
+          "raise": "El azul de Prusia saturado se reserva para la acción (buscar, elegir, pagar); todo lo demás va en azules lavados."
+        },
+        {
+          "from": "challenger-ikeda",
+          "raise": "Precios, tomas y totales en cifras tabulares alineadas, con rigor de tabla."
+        },
+        {
+          "from": "challenger-sevenseg",
+          "raise": "Elegir una foto cambia su estado en el lugar; la grilla nunca se reacomoda."
+        }
+      ],
+      "kind": "assigned"
+    },
+    {
+      "id": "model-pick",
+      "label": "Álbum con papel de seda",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Álbumes de casamiento y de quince con hojas de papel de seda entre las páginas y esquineros para pegar las fotos",
+      "thesis": "La galería es un álbum: las fotos se apoyan en esquineros y una hoja de seda translúcida las protege hasta que las elegís.",
+      "palette": [
+        "#f2f0ee",
+        "#d8d3cf",
+        "#9a8f8a",
+        "#4b4440",
+        "#b98b87"
+      ],
+      "materials": [
+        "cartulina gris perla",
+        "papel de seda translúcido",
+        "esquineros de papel",
+        "tipografía fina impresa"
+      ],
+      "viewport": "Una doble página de álbum: a la izquierda «Instante» y el buscador; a la derecha tres fotos con esquineros, una cubierta por papel de seda.",
+      "risk": "Es la dirección donde terminan muchas webs de fotógrafos de bodas: muy linda pero familiar.",
+      "kind": "pick"
+    },
+    {
+      "id": "challenger-versailles",
+      "label": "Jardines de Versalles",
+      "verdict": "declined",
+      "lineage": "parterres y perspectivas axiales",
+      "thesis": "Recorrer las fotos como un jardín de ejes y bosquetes.",
+      "palette": [
+        "#3f5a3a",
+        "#d9cdb2",
+        "#b08d45",
+        "#f3f2ee"
+      ],
+      "materials": [
+        "seto recortado",
+        "grava rastrillada",
+        "bronce dorado"
+      ],
+      "viewport": "Un plano de jardín con el evento en el eje central.",
+      "case": "Funde mal: elegante, pero quien compra fotos de una carrera no se reconoce en un jardín real.",
+      "risk": "Solemne y lejano.",
+      "kept": "Simetría en eje como estructura.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-versailles-bosquet-vistas-hero.webp",
+      "kind": "challenger",
+      "catalogId": "architecture-inhabitable-space-versailles-bosquet-vistas"
+    },
+    {
+      "id": "challenger-cityfold",
+      "label": "Ciudad dormida",
+      "verdict": "declined",
+      "lineage": "ciudad plegada como una frazada",
+      "thesis": "Las calles se pliegan como costuras bajo una noche bordada.",
+      "palette": [
+        "#16223f",
+        "#e8c66a",
+        "#eef0f5"
+      ],
+      "materials": [
+        "costuras de hilo",
+        "estrellas bordadas"
+      ],
+      "viewport": "Un mapa nocturno con barrios como parches.",
+      "case": "Funde mal: la metáfora tapa lo concreto (fotos, precio, pago).",
+      "risk": "Poético pero confuso para comprar.",
+      "kept": "Hilos finos como única división.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp",
+      "kind": "challenger",
+      "catalogId": "dream-surreal-impossible-worlds-sleeping-city-fold"
+    },
+    {
+      "id": "challenger-futurist",
+      "label": "Libro futurista",
+      "verdict": "declined",
+      "lineage": "libro abulonado de tipos de madera",
+      "thesis": "Cada página grita en diagonal.",
+      "palette": [
+        "#efe6d2",
+        "#111111",
+        "#c8261d"
+      ],
+      "materials": [
+        "tipos de madera",
+        "bulones de aluminio"
+      ],
+      "viewport": "Palabras gigantes inclinadas.",
+      "case": "Funde mal: es lo contrario de delicado.",
+      "risk": "Ruidoso.",
+      "kept": "Un único color reservado para la palabra que importa.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-futurist-bolted-book-hero.webp",
+      "kind": "challenger",
+      "catalogId": "design-canon-futurist-bolted-book"
+    },
+    {
+      "id": "challenger-ikeda",
+      "label": "Campo de datos",
+      "verdict": "declined",
+      "lineage": "instalaciones de barras y senoides en blanco y negro",
+      "thesis": "Todo es columna de datos.",
+      "palette": [
+        "#000000",
+        "#ffffff"
+      ],
+      "materials": [
+        "barras finas",
+        "cifras monoespaciadas"
+      ],
+      "viewport": "Un muro de barras.",
+      "case": "Funde mal: frío y técnico para recuerdos personales.",
+      "risk": "Agresivo a la vista.",
+      "kept": "Cifras tabulares con rigor.",
+      "kind": "challenger",
+      "catalogId": "ikeda-datamatics"
+    },
+    {
+      "id": "challenger-sevenseg",
+      "label": "Display de siete segmentos",
+      "verdict": "declined",
+      "lineage": "relojes despertadores y carteles de precios",
+      "thesis": "Todo se escribe con segmentos encendidos.",
+      "palette": [
+        "#0b0b0b",
+        "#ff3b30"
+      ],
+      "materials": [
+        "LED",
+        "celdas fantasma"
+      ],
+      "viewport": "Precios en dígitos de segmento.",
+      "case": "Funde mal: técnico y nocturno, nada delicado.",
+      "risk": "Frío.",
+      "kept": "El estado cambia en el lugar.",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-seven-segment-alarm-clock"
+    },
+    {
+      "id": "challenger-pulp",
+      "label": "Lámina pulp de cohete",
+      "verdict": "declined",
+      "lineage": "ilustraciones de revistas pulp",
+      "thesis": "Todo viaja en diagonal.",
+      "palette": [
+        "#b23a2a",
+        "#16224a",
+        "#e9d9a6"
+      ],
+      "materials": [
+        "aerógrafo",
+        "papel amarillento"
+      ],
+      "viewport": "Un cohete cruzando un cielo rojo.",
+      "case": "Funde mal: temático y estridente.",
+      "risk": "Disfraz retro.",
+      "kept": "Una sola trayectoria que guía la mirada.",
+      "kind": "challenger",
+      "catalogId": "pop-culture-shelf-pulp-rocketship-plate"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de la categoría",
+    "thesis": "Lo que hacen Pixieset o Pic-Time, ejecutado impecable.",
+    "palette": [
+      "#ffffff",
+      "#1a1a1a",
+      "#8a8a8a"
+    ],
+    "materials": [
+      "mucho blanco",
+      "tipografía fina",
+      "fotos protagonistas"
+    ],
+    "viewport": "Encabezado mínimo, galería en mosaico, carrito lateral.",
+    "risk": "Prolijo y lindo, pero indistinguible de la competencia."
+  },
+  "steer": true
+}

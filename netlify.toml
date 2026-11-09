@@ -1,0 +1,10 @@
+# Netlify detecta Next.js solo y usa su adaptador oficial (OpenNext):
+# las páginas SSR y las rutas /api corren como funciones.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Evita la telemetría anónima de Next en cada build.
+  NEXT_TELEMETRY_DISABLED = "1"

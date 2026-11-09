@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T11:44:01+00:00",
+  "title": "Design System: Instante",
+  "extensions": {
+    "colorMeta": {
+      "prussian": {
+        "role": "primary",
+        "displayName": "Azul de Prusia",
+        "canonical": "oklch(37.3% 0.097 259.7)",
+        "tonalRamp": [
+          "#0f2140",
+          "#162f58",
+          "#1a3866",
+          "#1f3f73",
+          "#27497f",
+          "#5d7fae",
+          "#cfdbea",
+          "#e8eef6"
+        ],
+        "note": "La lámina mapea la emulsión a un campo entre #1a3866 y #27497f (filtro #emulsion)."
+      },
+      "prussian-deep": {
+        "role": "primary",
+        "displayName": "Prusia profundo",
+        "canonical": "oklch(30.9% 0.080 259.8)",
+        "tonalRamp": [
+          "#020a1e",
+          "#142540",
+          "#2d4265",
+          "#48628c",
+          "#6883b0",
+          "#8da6ce",
+          "#b4caee",
+          "#ddf0ff"
+        ]
+      },
+      "cyan-mid": {
+        "role": "secondary",
+        "displayName": "Cian de trazo",
+        "canonical": "oklch(59.0% 0.082 256.6)",
+        "tonalRamp": [
+          "#010b1e",
+          "#122540",
+          "#2a4365",
+          "#44628d",
+          "#6484b0",
+          "#8aa7cf",
+          "#b2cbee",
+          "#dbf0ff"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel de algodón",
+        "canonical": "oklch(97.5% 0.005 258.3)",
+        "tonalRamp": [
+          "#0a0b0c",
+          "#242527",
+          "#414244",
+          "#606164",
+          "#818285",
+          "#a4a5a7",
+          "#c8c9cb",
+          "#edeef0"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Blanco de copia",
+        "canonical": "oklch(100.0% 0.000 89.9)"
+      },
+      "wash-1": {
+        "role": "neutral",
+        "displayName": "Lavado claro",
+        "canonical": "oklch(94.7% 0.013 255.5)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222529",
+          "#3e4247",
+          "#5d6268",
+          "#7e8389",
+          "#a1a5ab",
+          "#c5c9cf",
+          "#ebeff3"
+        ]
+      },
+      "wash-2": {
+        "role": "neutral",
+        "displayName": "Lavado medio",
+        "canonical": "oklch(88.7% 0.024 254.0)",
+        "tonalRamp": [
+          "#070b11",
+          "#1f262d",
+          "#3b434d",
+          "#58626e",
+          "#798390",
+          "#9da6b2",
+          "#c2cad4",
+          "#e8eff8"
+        ]
+      },
+      "thread": {
+        "role": "neutral",
+        "displayName": "Hilo",
+        "canonical": "oklch(86.6% 0.024 256.1)",
+        "tonalRamp": [
+          "#080b11",
+          "#20252d",
+          "#3b434c",
+          "#59626e",
+          "#7a8390",
+          "#9da6b1",
+          "#c2cad4",
+          "#e9eff8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "oklch(26.2% 0.055 260.3)",
+        "tonalRamp": [
+          "#040b18",
+          "#1a2538",
+          "#34425a",
+          "#50627f",
+          "#7083a2",
+          "#95a6c2",
+          "#bbcae3",
+          "#e3efff"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Tinta suave",
+        "canonical": "oklch(48.0% 0.052 260.9)",
+        "tonalRamp": [
+          "#050b17",
+          "#1b2536",
+          "#354259",
+          "#52627d",
+          "#7283a0",
+          "#96a6c0",
+          "#bccae1",
+          "#e4efff"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "Tinta tenue",
+        "canonical": "oklch(57.7% 0.046 260.8)",
+        "tonalRamp": [
+          "#060b16",
+          "#1c2535",
+          "#374256",
+          "#53627a",
+          "#74839d",
+          "#98a6bd",
+          "#becade",
+          "#e5efff"
+        ]
+      },
+      "ok": {
+        "role": "semantic",
+        "displayName": "Listo",
+        "canonical": "oklch(48.8% 0.097 157.7)",
+        "tonalRamp": [
+          "#001103",
+          "#002e18",
+          "#124e31",
+          "#2c714d",
+          "#4f936d",
+          "#7bb492",
+          "#a6d7b9",
+          "#d1fae1"
+        ]
+      },
+      "pending": {
+        "role": "semantic",
+        "displayName": "Pendiente",
+        "canonical": "oklch(50.8% 0.108 73.3)",
+        "tonalRamp": [
+          "#190500",
+          "#3a1d00",
+          "#5d3900",
+          "#835709",
+          "#a77836",
+          "#c79d66",
+          "#e7c293",
+          "#ffe9c2"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Error",
+        "canonical": "oklch(47.4% 0.161 23.6)",
+        "tonalRamp": [
+          "#260000",
+          "#4e0007",
+          "#79181d",
+          "#a63335",
+          "#cd5755",
+          "#ec827d",
+          "#ffaca7",
+          "#ffd7d1"
+        ]
+      },
+      "paper-veil": {
+        "role": "overlay",
+        "displayName": "Velo de papel",
+        "canonical": "rgb(245 247 250 / 0.97)"
+      },
+      "ink-scrim": {
+        "role": "overlay",
+        "displayName": "Velo de tinta",
+        "canonical": "rgb(20 36 63 / 0.32)"
+      },
+      "white-veil": {
+        "role": "overlay",
+        "displayName": "Velo blanco",
+        "canonical": "rgb(255 255 255 / 0.92)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "h1 sobre la lámina de la landing ('Instante')."
+      },
+      "display-event": {
+        "displayName": "Display event",
+        "purpose": "Nombre del evento sobre la lámina de galería y descarga."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de página del panel."
+      },
+      "headline-sheet": {
+        "displayName": "Headline sheet",
+        "purpose": "Título de las hojas (login, pago, 404)."
+      },
+      "headline-section": {
+        "displayName": "Headline section",
+        "purpose": "Títulos de sección de la landing."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Cifras de la caja del panel."
+      },
+      "count": {
+        "displayName": "Count",
+        "purpose": "Conteo de copias y total a pagar."
+      },
+      "wordmark-plate": {
+        "displayName": "Wordmark plate",
+        "purpose": "Wordmark dentro de la lámina chica."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Wordmark de la barra superior; numerales romanos de los pasos."
+      },
+      "promise": {
+        "displayName": "Promise",
+        "purpose": "Promesa bajo el título de la landing."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Subtítulos del panel."
+      },
+      "title-sm": {
+        "displayName": "Title sm",
+        "purpose": "Pasos, filas del libro contable, cabezal de la hoja."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Precio por toma."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido."
+      },
+      "body-sm": {
+        "displayName": "Body sm",
+        "purpose": "Texto secundario y pasos."
+      },
+      "ui": {
+        "displayName": "Ui",
+        "purpose": "Botones, tablas, textos de interfaz."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Metadatos, botón chico, listas de carga."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Chips, aviso de demo, pies de foto del panel."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Versalitas de catálogo: rótulos, anotaciones, tablas, insignias."
+      }
+    },
+    "shadows": [
+      {
+        "name": "floating-bar",
+        "value": "0 20px 44px -24px rgb(20 36 63 / 0.45)",
+        "purpose": "Barra 'Tus copias' flotante."
+      },
+      {
+        "name": "sheet",
+        "value": "0 18px 40px -28px rgb(20 36 63 / 0.35)",
+        "purpose": "Hoja modal de checkout."
+      },
+      {
+        "name": "viewer-print",
+        "value": "0 30px 60px -40px rgb(20 36 63 / 0.6)",
+        "purpose": "Copia ampliada en el visor."
+      },
+      {
+        "name": "focus-halo",
+        "value": "0 0 0 3px #cfdbea",
+        "purpose": "Halo de foco de los campos."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Única curva del sistema."
+      },
+      {
+        "name": "press",
+        "value": "160ms",
+        "purpose": "Escala 0.98 al apretar un botón."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Fondo, borde y color en hover y estados."
+      },
+      {
+        "name": "label-ink",
+        "value": "300ms",
+        "purpose": "El texto de la toma pasa a blanco."
+      },
+      {
+        "name": "fade",
+        "value": "260ms / 320ms",
+        "purpose": "Velo de la hoja y del visor."
+      },
+      {
+        "name": "count-bump",
+        "value": "420ms",
+        "purpose": "Salto del conteo de copias."
+      },
+      {
+        "name": "rise",
+        "value": "480ms",
+        "purpose": "Entrada de la barra (24px) y de la hoja (28px)."
+      },
+      {
+        "name": "expose",
+        "value": "520ms",
+        "purpose": "Lavado de Prusia que barre la anotación elegida (clip-path)."
+      },
+      {
+        "name": "photo-hover",
+        "value": "600ms",
+        "purpose": "Escala 1.02 de la foto en hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "none",
+        "purpose": "prefers-reduced-motion apaga toda animación y transición."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "bar-compact",
+        "value": "480px"
+      },
+      {
+        "name": "search-stack",
+        "value": "520px"
+      },
+      {
+        "name": "caja-pair",
+        "value": "620px"
+      },
+      {
+        "name": "mobile",
+        "value": "640px"
+      },
+      {
+        "name": "steps-stack",
+        "value": "700px"
+      },
+      {
+        "name": "sheet-center",
+        "value": "720px"
+      },
+      {
+        "name": "dash-stack",
+        "value": "900px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón primario",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "La acción de la pantalla, en azul de Prusia.",
+      "html": "<button class=\"ds-btn ds-btn-primary\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-3.5-3.5\"/></svg>Buscar mis fotos</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;font:600 0.92rem/1 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);letter-spacing:0.02em;border-radius:999px;cursor:pointer;transition:background-color 200ms cubic-bezier(0.16,1,0.3,1),border-color 200ms cubic-bezier(0.16,1,0.3,1),transform 160ms cubic-bezier(0.16,1,0.3,1)}.ds-btn svg{width:17px;height:17px}.ds-btn-primary{background:var(--prussian,#1f3f73);color:#fff;border:1px solid var(--prussian,#1f3f73)}.ds-btn-primary:hover{background:var(--prussian-deep,#162f58);border-color:var(--prussian-deep,#162f58)}.ds-btn:active{transform:scale(0.98)}.ds-btn:focus-visible{outline:2px solid var(--prussian,#1f3f73);outline-offset:3px}"
+    },
+    {
+      "name": "Botón outline",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Acción secundaria: píldora transparente con borde hilo.",
+      "html": "<button class=\"ds-btn-outline\">Seguir eligiendo</button>",
+      "css": ".ds-btn-outline{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 20px;font:600 0.92rem/1 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);letter-spacing:0.02em;color:var(--ink,#14243f);background:transparent;border:1px solid var(--thread,#c9d4e3);border-radius:999px;cursor:pointer;transition:background-color 200ms cubic-bezier(0.16,1,0.3,1),border-color 200ms cubic-bezier(0.16,1,0.3,1)}.ds-btn-outline:hover{background:var(--wash-1,#e8eef6);border-color:var(--cyan-mid,#5d7fae)}.ds-btn-outline:focus-visible{outline:2px solid var(--prussian,#1f3f73);outline-offset:3px}"
+    },
+    {
+      "name": "Campo",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo con rótulo en versalitas; foco en azul de Prusia con halo lavado.",
+      "html": "<label class=\"ds-field\"><span>Tu nombre</span><input class=\"ds-input\" placeholder=\"Como figura en el pago\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px}.ds-field>span{font:600 0.72rem/1.3 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft,#4d5e7b)}.ds-input{min-height:46px;padding:10px 14px;font:400 1rem/1.3 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);color:var(--ink,#14243f);background:#fff;border:1px solid var(--thread,#c9d4e3);border-radius:6px;transition:border-color 200ms cubic-bezier(0.16,1,0.3,1),box-shadow 200ms cubic-bezier(0.16,1,0.3,1)}.ds-input::placeholder{color:var(--ink-faint,#6a7a95)}.ds-input:focus{outline:none;border-color:var(--prussian,#1f3f73);box-shadow:0 0 0 3px var(--wash-2,#cfdbea)}"
+    },
+    {
+      "name": "Pestañas del panel",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Pestañas en píldora; la actual en lavado claro y azul de Prusia.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Mis eventos</a><a href=\"#\">Ventas</a><a href=\"#\">Perfil</a></nav>",
+      "css": ".ds-nav{display:flex;gap:6px;font-family:var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif)}.ds-nav a{padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;color:var(--ink-soft,#4d5e7b);transition:background-color 200ms cubic-bezier(0.16,1,0.3,1),color 200ms cubic-bezier(0.16,1,0.3,1)}.ds-nav a:hover{background:var(--wash-1,#e8eef6);color:var(--ink,#14243f)}.ds-nav a[aria-current=page]{background:var(--wash-1,#e8eef6);color:var(--prussian,#1f3f73);font-weight:600}.ds-nav a:focus-visible{outline:2px solid var(--prussian,#1f3f73);outline-offset:3px}"
+    },
+    {
+      "name": "Chip de elección",
+      "kind": "chip",
+      "refersTo": "pick-chip",
+      "description": "Elegir una toma: '+ $ 5.000' pasa a 'Elegida'.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M12 5v14M5 12h14\"/></svg>$ 5.000</button> <button class=\"ds-chip\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"m5 12 5 5 9-10\"/></svg>Elegida</button>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:4px 12px 4px 10px;border-radius:999px;border:1px solid var(--thread,#c9d4e3);background:#fff;color:var(--ink,#14243f);font:600 0.82rem/1 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);font-variant-numeric:tabular-nums;cursor:pointer;transition:background-color 200ms cubic-bezier(0.16,1,0.3,1),border-color 200ms cubic-bezier(0.16,1,0.3,1),color 200ms cubic-bezier(0.16,1,0.3,1)}.ds-chip svg{width:15px;height:15px}.ds-chip:hover{border-color:var(--cyan-mid,#5d7fae);background:var(--wash-1,#e8eef6)}.ds-chip[aria-pressed=true]{background:var(--wash-1,#e8eef6);border-color:var(--prussian,#1f3f73);color:var(--prussian,#1f3f73)}.ds-chip:focus-visible{outline:2px solid var(--prussian,#1f3f73);outline-offset:3px}"
+    },
+    {
+      "name": "Toma que se expone",
+      "kind": "custom",
+      "refersTo": "take-label-picked",
+      "description": "Interacción signature: el lavado de Prusia barre la anotación al elegir (clip-path). En la vista previa se ve en hover.",
+      "html": "<span class=\"ds-take-label\"><span>Toma 001</span></span> <span class=\"ds-take-label ds-picked\"><span>Toma 002</span></span>",
+      "css": ".ds-take-label{position:relative;display:inline-block;padding:3px 8px;border-radius:2px;overflow:hidden;font:600 0.72rem/1.3 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);letter-spacing:0.14em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--ink-faint,#6a7a95)}.ds-take-label::before{content:'';position:absolute;inset:0;background:var(--prussian,#1f3f73);clip-path:inset(0 100% 0 0);transition:clip-path 520ms cubic-bezier(0.16,1,0.3,1)}.ds-take-label>span{position:relative;transition:color 300ms cubic-bezier(0.16,1,0.3,1)}.ds-picked::before,.ds-take-label:hover::before{clip-path:inset(0 0 0 0)}.ds-picked>span,.ds-take-label:hover>span{color:#fff}"
+    },
+    {
+      "name": "Insignia",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Estado de evento en versalitas; encendida en azul de Prusia.",
+      "html": "<span class=\"ds-badge\">Borrador</span> <span class=\"ds-badge ds-on\">Publicada</span>",
+      "css": ".ds-badge{font:600 0.7rem/1.3 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-radius:999px;border:1px solid var(--thread,#c9d4e3);color:var(--ink-soft,#4d5e7b)}.ds-on{border-color:var(--prussian,#1f3f73);color:var(--prussian,#1f3f73);background:var(--wash-1,#e8eef6)}"
+    },
+    {
+      "name": "Barra Tus copias",
+      "kind": "custom",
+      "refersTo": "copies-bar",
+      "description": "Píldora flotante con el conteo en Bodoni y la acción primaria.",
+      "html": "<div class=\"ds-bar\"><span class=\"ds-count\">2</span><span class=\"ds-bar-label\">$ 10.000<small>2 copias elegidas</small></span><button class=\"ds-bar-btn\">Ver mis copias</button></div>",
+      "css": ".ds-bar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;max-width:600px;padding:10px 10px 10px 20px;background:#fff;color:var(--ink,#14243f);border:1px solid var(--thread,#c9d4e3);border-radius:999px;box-shadow:0 20px 44px -24px rgb(20 36 63 / 0.45);font-family:var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif)}.ds-count{font-family:var(--f-display, 'Bodoni Moda', Didot, serif);font-style:italic;font-variation-settings:'opsz' 24;font-size:1.8rem;line-height:1;font-variant-numeric:tabular-nums}.ds-bar-label{font-weight:600;font-variant-numeric:tabular-nums;line-height:1.25}.ds-bar-label small{display:block;font-weight:400;color:var(--ink-soft,#4d5e7b)}.ds-bar-btn{min-height:44px;padding:10px 20px;border-radius:999px;border:1px solid var(--prussian,#1f3f73);background:var(--prussian,#1f3f73);color:#fff;font:600 0.92rem/1 var(--f-ui, 'Hanken Grotesk', system-ui, sans-serif);cursor:pointer;transition:background-color 200ms cubic-bezier(0.16,1,0.3,1)}.ds-bar-btn:hover{background:var(--prussian-deep,#162f58)}.ds-bar-btn:focus-visible{outline:2px solid var(--prussian,#1f3f73);outline-offset:3px}"
+    },
+    {
+      "name": "Lámina de cianotipia",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Aproximación estática: en la app el borde de pincel y la densidad los genera el filtro SVG #emulsion y los helechos el fractal de Barnsley (Cyanotype.tsx).",
+      "html": "<div class=\"ds-plate\"><h1>Instante</h1><p>Tus fotos del evento, reveladas para vos.</p></div>",
+      "css": ".ds-plate{padding:56px 24px;text-align:center;color:#fff;background:radial-gradient(120% 90% at 50% 50%,#27497f,#1f3f73 60%,#1a3866)}.ds-plate h1{margin:0;font-family:var(--f-display, 'Bodoni Moda', Didot, serif);font-style:italic;font-weight:400;font-variation-settings:'opsz' 96;font-size:3.6rem;line-height:0.92;letter-spacing:-0.02em}.ds-plate p{margin:14px 0 0;font-family:var(--f-display, 'Bodoni Moda', Didot, serif);font-style:italic;font-weight:400;font-variation-settings:'opsz' 24;font-size:1.15rem}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La copia al sol",
+    "overview": "Instante es una lámina de cianotipia apoyada sobre papel de algodón frío. La luz dibuja en blanco sobre azul de Prusia; todo lo demás es papel claro, aire y líneas finas como un hilo. La lámina (un campo azul con densidad irregular de emulsión y borde deshilachado en vetas de pincel) es la única superficie de color grande del sistema, y adentro de ella viven los helechos: fotogramas blancos generados en código con el fractal de Barnsley, sin una sola imagen.\n\nLa composición es simétrica y centrada en las superficies que persuaden y muestran (landing, galería, hojas de login/pago/descarga), y se ordena en columnas y libros contables en el panel del fotógrafo, que hereda el mismo papel, la misma tinta y los mismos hilos en un registro sobrio. La densidad es baja: mucho aire entre bloques, divisiones de un pelo en lugar de cajas, cifras tabulares con rigor de catálogo. El estado cambia en el lugar, sin saltos de pantalla.\n\nEl mundo reemplaza por completo a \"Foto Express\" (cartel rojo, stickers ámbar, fondo azul noche), descartado por la usuaria por estridente. Lo que rechaza: la tienda comercial que grita y la galería blanca genérica sin material.",
+    "keyCharacteristics": [
+      "Papel de algodón frío en todo; ninguna superficie oscura de fondo.",
+      "Una sola lámina azul de Prusia por pantalla, con emulsión irregular y helechos blancos adentro.",
+      "Azul de Prusia sólido sólo para la acción y el estado elegido.",
+      "Títulos en Bodoni Moda itálica; interfaz en Hanken Grotesk; anotaciones de catálogo en versalitas espaciadas.",
+      "Divisiones de 1px color hilo; sin cajas, sin sombras duras.",
+      "Vocabulario de laboratorio fotográfico: \"Tus copias\", \"Elegida\", \"Recién reveladas\", \"Toma 001\"."
+    ],
+    "rules": [
+      {
+        "name": "La Regla del Azul que Trabaja",
+        "body": "El azul de Prusia sólido aparece sólo donde se puede actuar o donde algo quedó elegido: botón primario, lavado de \"Elegida\", foco, progreso, estado activo, link. Las únicas excepciones toleradas son el punto del wordmark y la cifra del total a pagar, que acompaña al botón de pago. Si un azul de Prusia no se puede tocar ni marca una elección, sobra.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla de la Lámina Única",
+        "body": "El azul en superficie grande existe sólo como lámina de emulsión (filtro `#emulsion`), nunca como relleno plano de un bloque, y hay una sola por pantalla.",
+        "section": "colors"
+      },
+      {
+        "name": "La Regla del Eje Óptico",
+        "body": "`opsz 96` con peso 400 sólo en los h1 que van sobre una lámina (landing, galería, descarga). Todo otro uso de la Bodoni es `opsz 24`, para que los trazos finos se sostengan en tamaños medianos: títulos, subtítulos y wordmark en 500; cifras (precio, conteo, caja, numerales de los pasos) y la promesa de la landing en 400.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla de la Itálica",
+        "body": "La Bodoni nunca va en redonda ni en versalitas; las versalitas son de la Hanken.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla de la Cifra Tabular",
+        "body": "Precios, conteos, totales, códigos y tablas usan cifras tabulares.",
+        "section": "typography"
+      },
+      {
+        "name": "La Regla del Hilo",
+        "body": "Lo que separa es una línea de 1px color hilo; lo que abre un bloque del panel o un libro contable es una línea de 1px de tinta. No hay cajas con borde ni tarjetas. Las excepciones son exactamente dos contenedores: la zona de carga (borde punteado cian) y la hoja modal de checkout (con su ayuda de pago adentro). Los controles (campos, botones, chips, la barra flotante) no cuentan como cajas.",
+        "section": "elevation"
+      },
+      {
+        "name": "La Regla de la Sombra Blanda",
+        "body": "Nada lleva sombra dura ni desplazada. Sólo flotan la barra, la hoja y la copia del visor.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** apoyar todo sobre papel de algodón y separar con hilos de 1px.",
+      "**Do** reservar el azul de Prusia sólido para la acción y el estado elegido.",
+      "**Do** usar la lámina de emulsión como única superficie azul grande, con los helechos siempre adentro; en el celular, helechos abajo en las esquinas y aire abajo en la lámina.",
+      "**Do** escribir los títulos en Bodoni Moda itálica: `opsz 96` y 400 sólo en los h1 sobre lámina, `opsz 24` en todo lo demás (500 en títulos, 400 en cifras).",
+      "**Do** anotar las fotos como un catálogo: versalitas espaciadas y cifras tabulares (\"TOMA 001 · PRUEBA\", \"$ 5.000\").",
+      "**Do** hablar en voseo con vocabulario de laboratorio: \"Tus copias\", \"Elegida\", \"Recién reveladas\".",
+      "**Do** animar con la curva de salida suave (`cubic-bezier(0.16, 1, 0.3, 1)`) y apagar todo con `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** encerrar contenido en tarjetas con borde ni sombras duras o desplazadas; las únicas cajas son la zona de carga y la hoja de checkout.",
+      "**Don't** pintar bloques planos de azul de Prusia ni usarlo como decoración.",
+      "**Don't** sacar un helecho fuera de la emulsión ni ponerlo sobre el papel.",
+      "**Don't** usar la Bodoni en redonda ni la Hanken para títulos.",
+      "**Don't** volver al mundo \"Foto Express\": nada de rojo cartel, stickers ámbar, fondo azul noche, Archivo ni Permanent Marker.",
+      "**Don't** poner texto en tonos más claros que la tinta tenue."
+    ]
+  }
+}
