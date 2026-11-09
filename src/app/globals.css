@@ -379,6 +379,8 @@ textarea.input { resize: vertical; min-height: 76px; }
 .ticket-body { padding: clamp(20px, 3vw, 28px) 0 0; display: grid; gap: 16px; }
 .ticket h1 { font-size: clamp(2rem, 5vw, 2.6rem); }
 .ticket p { color: var(--ink-soft); }
+.demo-access { display: grid; gap: 10px; padding: 16px 0; border-block: 1px solid var(--thread); }
+.demo-access p { margin: 0; }
 .divider { display: flex; align-items: center; gap: 12px; color: var(--ink-faint); font-size: 0.8rem; }
 .divider::before, .divider::after { content: ""; flex: 1; border-top: 1px solid var(--thread); }
 .status-stamp {

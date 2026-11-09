@@ -18,3 +18,6 @@ dev-emails.log
 .impeccable/hook.cache.json
 .impeccable/decision/serve2.*
 .impeccable/review/*.png
+
+# Guía personal de entrevista (no publicar)
+GUIA-ENTREVISTA.md

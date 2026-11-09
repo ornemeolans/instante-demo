@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
+  signInWithCustomToken,
   signInWithPopup,
   updateProfile,
   type UserCredential,
@@ -13,6 +14,8 @@ import {
 import { clientAuth } from "@/lib/firebase/client";
 import { Wordmark } from "@/components/Wordmark";
 import { Plate } from "@/components/Cyanotype";
+
+const DEMO_MODE = process.env.NEXT_PUBLIC_DEMO_MODE === "true";
 
 const ERRORS: Record<string, string> = {
   "auth/invalid-credential": "Correo o contraseña incorrectos.",
@@ -72,6 +75,15 @@ export default function LoginPage() {
 
   const onGoogle = () => run(async () => startSession(await signInWithPopup(clientAuth(), new GoogleAuthProvider())));
 
+  // Cuenta demo compartida: el servidor firma un custom token (sin contraseña pública).
+  const onDemo = () =>
+    run(async () => {
+      const res = await fetch("/api/auth/demo", { method: "POST" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error ?? "No se pudo entrar con la cuenta demo");
+      await startSession(await signInWithCustomToken(clientAuth(), data.token), data.displayName);
+    });
+
   return (
     <div className="center-page">
       <header className="topbar">
@@ -84,6 +96,15 @@ export default function LoginPage() {
           </Plate>
           <div className="ticket-body">
             <h1 className="display-type">{mode === "login" ? "Hola de nuevo" : "Creá tu cuenta"}</h1>
+            {DEMO_MODE && (
+              <div className="demo-access">
+                <p>¿Querés recorrer el panel sin registrarte?</p>
+                <button className="btn btn-primary" onClick={onDemo} disabled={busy}>
+                  Entrar con la cuenta demo
+                </button>
+                <p className="small">Es una cuenta compartida: lo que subas lo pueden ver otros visitantes.</p>
+              </div>
+            )}
             <p>
               {mode === "login"
                 ? "Entrá para subir fotos, publicar tus eventos y ver tus ventas."

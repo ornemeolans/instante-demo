@@ -10,3 +10,7 @@ export const LIMITS = DEMO_MODE
   : { maxEventsPerPhotographer: 500, maxPhotosPerEvent: 3000, maxUploadBytes: 60 * 1024 * 1024 };
 
 export const ACCEPTED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/tiff"];
+
+/** Cuenta de fotógrafo compartida para que cualquiera pruebe el panel sin registrarse. */
+export const DEMO_UID = "fotografo-demo";
+export const DEMO_NAME = "Fotógrafo demo";
